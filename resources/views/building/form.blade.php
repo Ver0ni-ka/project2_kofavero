@@ -45,6 +45,28 @@
     @enderror
     </div>
 
+
+    <div class="mb-3">
+        <label for="building-style" class="form-label">Style</label>
+        <select
+            id="building-style"
+            name="style_id"
+            class="form-select @error('style_id') is-invalid @enderror"
+        >
+    <option value="">Choose the style!</option>
+        @foreach($styles as $style)
+            <option
+                value="{{ $style->id }}"
+                @if ($style->id == old('style_id', $building->style_id ?? false)) selected @endif
+            >{{ $style->name }}</option>
+        @endforeach
+    </select>
+    @error('style_id')
+    <p class="invalid-feedback">{{ $errors->first('style_id') }}</p>
+    @enderror
+    </div>
+
+
     <div class="mb-3">
     <label for="building-description" class="form-label">Description</label>
     <textarea
@@ -70,6 +92,7 @@
     <p class="invalid-feedback">{{ $errors->first('year') }}</p>
     @enderror
     </div>
+
 
     <div class="mb-3">
         <label for="building-image" class="form-label">Image</label>

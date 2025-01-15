@@ -12,4 +12,22 @@ class Building extends Model
     {
     return $this->belongsTo(Architects::class);
     }
+
+    public function style(): BelongsTo
+    {
+    return $this->belongsTo(Style::class);
+    }
+
+    public function jsonSerialize(): mixed 
+    { 
+        return [ 
+            'id' => intval($this->id), 
+            'name' => $this->name, 
+            'description' => $this->description, 
+            'architect' => $this->architect->name, 
+            'style' => ($this->style ? $this->style->name : ''), 
+            'year' => intval($this->year), 
+            'image' => asset('images/' . $this->image), 
+        ]; 
+    } 
 }

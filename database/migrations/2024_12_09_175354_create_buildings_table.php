@@ -12,6 +12,7 @@ return new class extends Migration
         Schema::create('buildings', function (Blueprint $table) {
             $table->id();
             $table->foreignId('architect_id');
+            $table->foreignId('style_id'); //
             $table->string('name', 256);
             $table->text('description')->nullable();
             $table->integer('year');
@@ -19,6 +20,7 @@ return new class extends Migration
             $table->boolean('display');
             $table->timestamps();
             $table->foreign('architect_id')->references('id')->on('architects');
+            $table->foreign('style_id')->references('id')->on('styles');
         });
     }
 

@@ -13,6 +13,7 @@
             <th>Name</th>
             <th>Architect</th>
             <th>Year</th>
+            <th>Style</th>
             <th>Completed</th>
             <th>&nbsp;</th>
         </tr>
@@ -25,6 +26,7 @@
             <td>{{ $building->name }}</td>
             <td>{{ $building->architect->name ?? 'Unknown' }}</td>
             <td>{{ $building->year }}</td>
+            <td>{{ $building->style->name ?? 'Unknown' }}</td>
             <td>{!! $building->display ? '&#x2714;' : '&#x274C;' !!}</td>
             <td>
             <a

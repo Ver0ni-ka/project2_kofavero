@@ -3,7 +3,8 @@
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ArchitectController;
-
+use App\Http\Controllers\StyleController;
+use App\Http\Controllers\DataController; 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BuildingController;
 
@@ -31,5 +32,20 @@ Route::get('/buildings/update/{building}', [BuildingController::class, 'update']
 Route::post('/buildings/patch/{building}', [BuildingController::class, 'patch']);
 Route::post('/buildings/delete/{building}', [BuildingController::class, 'delete']);
 
+
+Route::get('/styles', [StyleController::class, 'list']);
+Route::get('/styles/create', [StyleController::class, 'create']);
+Route::post('/styles/put', [StyleController::class, 'put']);
+
+Route::get('/styles/update/{style}', [StyleController::class, 'update']);
+Route::post('/styles/patch/{style}', [StyleController::class, 'patch']);
+
+Route::post('/styles/delete/{style}', [StyleController::class, 'delete']);
+
+
+// Data/API 
+Route::get('/data/get-top-buildings', [DataController::class, 'getTopBuildings']); 
+Route::get('/data/get-building/{building}', [DataController::class, 'getBuilding']); 
+Route::get('/data/get-related-buildings/{building}', [DataController::class, 'getRelatedBuildings']); 
 
 
