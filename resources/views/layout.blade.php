@@ -5,7 +5,6 @@
         <title>Project 2 - {{ $title }}</title>
         <meta name="description" content="Web Technologies Project 2">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
         <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet" integrity="sha384-
@@ -13,44 +12,25 @@
         crossorigin="anonymous">
     </head>
     <body>
-    <nav class="navbar navbar-expand-md bg-primary mb-3" data-bs-theme="dark">
-        <div class="container">
-            <span class="navbar-brand mb-0 h1">Architects Project</span>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/">Home</a>
-                    </li>
-
-                @if(Auth::check())
-                    <li class="nav-item">
-                        <a class="nav-link" href="/architects">Architects</a>
-                    </li>       
-                    <li class="nav-item">
-                        <a class="nav-link" href="/styles">Styles</a>
-                    </li>          
-                    <li class="nav-item">
-                        <a class="nav-link" href="/buildings">Buildings</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="/logout">Log out</a>
-                    </li>
-                @else
-                    <li class="nav-item">
-                    <a class="nav-link" href="/login">Authenticate</a>
-                    </li>
-                @endif
-
-
-
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&family=Tangerine:wght@400;700&display=swap');
+</style>
+    <nav style="background-color: #1a202c; padding: 15px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; color: white;">
+        <span style="font-size: 24px; font-family: 'Quintessential', sans-serif; font-weight: bold;">Architects Project</span>
+        <ul style="list-style: none; display: flex; gap: 15px; margin: 0; padding: 0;">
+            <li><a href="/" style="text-decoration: none; color: white;">Home</a></li>
+            @if(Auth::check())
+                <li><a href="/architects" style="text-decoration: none; color: white;">Architects</a></li>
+                <li><a href="/styles" style="text-decoration: none; color: white;">Styles</a></li>
+                <li><a href="/buildings" style="text-decoration: none; color: white;">Buildings</a></li>
+                <li><a href="/logout" style="text-decoration: none; color: white;">Log out</a></li>
+            @else
+                <li><a href="/login" style="text-decoration: none; color: white;">Authenticate</a></li>
+            @endif
+        </ul>
+    </div>
+</nav>
         <main class="container">
             <div class="row">
                 <div class="col">
@@ -58,15 +38,11 @@
                 </div>
             </div>
         </main>
-        <footer class="text-bg-dark mt-3">
-            <div class="container">
-                <div class="row py-5">
-                    <div class="col">
-                        Veronika Kofanova, 2024
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <footer style="background-color: #1a202c; color: white; font-family: 'Quintessential', sans-serif; text-align: center; padding: 20px; margin-top: 20px;">
+    <div>
+        Veronika Kofanova, 2024
+    </div>
+</footer>
         <script src="/js/admin.js"></script>
 
     </body>

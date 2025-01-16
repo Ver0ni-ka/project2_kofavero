@@ -28,7 +28,7 @@ class BuildingRequest extends FormRequest
     public function messages(): array
 {
  return [
-    'required' => 'Lauks ":attribute" ir obligāts',
+    'required' => 'Поле ":attribute" обязательно',
     'min' => 'Laukam ":attribute" jābūt vismaz :min simbolus garam',
     'max' => 'Lauks ":attribute" nedrīkst būt garāks par :max simboliem',
     'boolean' => 'Lauka ":attribute" vērtībai jābūt "true" vai "false"',

@@ -1,0 +1,194 @@
+header {
+    background-image: url('https://i.redd.it/29qlqk5omv9b1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    font-family: "Tangerine", serif;
+    font-weight: 700;
+    font-size: 4.5rem;
+  }
+  
+  header div {
+    padding: 20px;
+  }
+
+  footer {
+    background-color: #1a202c;
+    color: #ffffff;
+    text-align: center;
+    font-family: "Tangerine", serif;
+    font-size: 2rem;
+  }
+  
+  footer div {
+    padding: 20px;
+  }
+  
+  main {
+    margin-top: 50px; 
+    margin-bottom: 50px;
+    padding: 0 30px; 
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px;
+    padding: 30px; 
+    margin-top: 30px;
+  }
+  
+ 
+  .building-card {
+    background-color: #f5f5f5; 
+    border-radius: 10px; 
+    overflow: hidden; 
+    position: relative;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  
+  .building-card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); 
+  }
+  
+
+  .building-card img {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+  }
+
+  
+
+  .building-content {
+    padding: 25px; 
+    text-align: center; 
+  }
+  
+
+  .building-name {
+    font-family: 'Quintessential', sans-serif; 
+    font-size: 2.5rem; 
+    color: #333; 
+    margin-bottom: 10px; 
+  }
+  
+  .building-name h3{
+    font-family: 'Quintessential', sans-serif; 
+    font-size: 2rem; 
+    color: #333; 
+    margin-bottom: 10px; 
+  }
+  
+  .building-description {
+    font-family: 'Quintessential', serif; 
+    font-size: 1rem; 
+    color: #666; 
+    line-height: 1.5; 
+  }
+
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr; 
+      gap: 20px; 
+    }
+
+    .building-card {
+        margin-bottom: 2rem;
+  } }
+
+  
+.seemorebutton {
+    font-family: 'Quintessential', serif; 
+    font-size: 1rem; 
+    margin-top: 15px;
+    padding: 15px 20px; 
+    background-color: #1a202c; 
+    color: #ffffff; 
+    border: none;
+    border-radius: 9999px; 
+    cursor: pointer; 
+  }
+  
+  .seemorebutton:hover {
+    background-color: #1d3252;
+  }
+
+.selected-building-container {
+    background-color: #f8fafc; 
+    padding: 30px; 
+    border-radius: 16px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 30px; 
+  }
+  
+  .selected-building-container h1 {
+    font-family: 'Tangerine', serif;
+    font-size: 4rem;
+    color: #1f2937;
+    margin-bottom: 12px;
+    font-weight: 800;
+  }
+  
+  .selected-building-container p {
+    font-family: 'Quintessential', serif;
+    font-size: 1.25rem;
+    color: #374151;
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+  
+  .selected-building-container dl {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .selected-building-container dt {
+    font-weight: bold;
+    font-family: 'Quintessential', serif;
+  }
+  
+  .selected-building-container dd {
+    font-family: 'Quintessential', serif;
+    color: #6b7280;
+  }
+  
+  .selected-building-container img {
+    width: 100%;
+    max-width: 1000px;
+    max-height: 800px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+  }
+  
+  .goback {
+    font-family: 'Quintessential', serif;
+    font-size: 1.5rem;
+    margin-top: 15px;
+    padding: 15px 20px;
+    background-color: #384252;
+    color: #ffffff;
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+  }
+  
+  .goback:hover {
+    background-color: #5f6b7c;
+  }
+  
+  .similar {
+    color: #1a202c;
+    text-align: center;
+    font-family: "Tangerine", serif;
+    font-weight: 700;
+    font-size: 4.5rem;
+  }

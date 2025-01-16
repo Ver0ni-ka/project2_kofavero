@@ -11,7 +11,7 @@ class DataController extends Controller
     // Return 3 builded buildings in random order 
     public function getTopBuildings(): JsonResponse 
     { 
-        $buildings = Building::where('display', true) ->inRandomOrder() ->take(3) ->get(); 
+        $buildings = Building::where('display', true) ->inRandomOrder() ->take(4) ->get(); 
         return response()->json($buildings); 
     } 
     
